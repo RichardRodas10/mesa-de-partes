@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Mesa de Partes</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="login-container register">
+        <h1>CREAR CUENTA</h1>
+
+        <form id="registerForm" class="grid-form">
+            <!-- Datos personales -->
+            <div class="grid-3 align-bottom">
+                <div class="input-group dni-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" id="dni" required />
+                    <i class="fa-solid fa-circle-xmark dni-error-icon"></i>
+                    <i class="fa-solid fa-circle-check dni-success-icon"></i>
+                </div>
+                <div class="input-group">
+                    <label for="fechaNacimiento">Fecha de nacimiento</label>
+                    <input type="date" id="fechaNacimiento" required />
+                </div>
+                <div class="input-group">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" required />
+                </div>
+            </div>
+
+            <div class="grid-3">
+                <div class="input-group">
+                    <label for="apellidoPaterno">Apellido Paterno</label>
+                    <input type="text" id="apellidoPaterno" required readonly />
+                </div>
+                <div class="input-group">
+                    <label for="apellidoMaterno">Apellido Materno</label>
+                    <input type="text" id="apellidoMaterno" required readonly />
+                </div>
+                <div class="input-group">
+                    <label for="nombres">Nombres</label>
+                    <input type="text" id="nombres" required readonly />
+                </div>
+            </div>            
+
+            <!-- Dirección -->
+            <div class="grid-3">
+                <div class="input-group">
+                    <label for="departamento">Departamento</label>
+                    <select id="departamento" required>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="provincia">Provincia</label>
+                    <select id="provincia" required>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="distrito">Distrito</label>
+                    <select id="distrito" required>
+                        <option value="">Seleccione...</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contacto -->
+            <div class="grid-3 align-bottom">
+                <div class="input-group">
+                    <label for="direccion">Dirección</label>
+                    <input type="text" id="direccion" placeholder="Ej. Av. La Paz 123, dpto. 401" required />
+                </div>
+                <div class="input-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" placeholder="Ej. correo@gmail.com" required />
+                </div>
+            </div>
+
+            <!-- Credenciales -->
+            <div class="grid-2">
+                <div class="input-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required />
+                </div>
+                <div class="input-group">
+                    <label for="confirmPassword">Confirmar Contraseña</label>
+                    <input type="password" id="confirmPassword" required />
+                </div>
+            </div>
+
+            <button type="submit" class="btn-guardar">
+                <i class="fa-solid fa-floppy-disk"></i>
+                Guardar y finalizar
+            </button>
+            
+        </form>
+
+        <div class="links">
+            <a href="index.html"><i class="fa-solid fa-user"></i> Inicia sesión</a>
+            <span>|</span>
+            <a href="forgot-password.html"><i class="fa-solid fa-triangle-exclamation"></i> Olvidé mi contraseña</a>
+        </div>        
+
+        <script src="./js/ubigeo.js"></script>
+        <script src="./js/validarDNI.js"></script>
+        <script type="module" src="./js/register.js"></script>
+    </div>
+</body>
+</html>
