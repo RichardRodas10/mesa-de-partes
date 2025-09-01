@@ -1,5 +1,9 @@
+[data-auth="checking"] {
+    visibility: hidden;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Krub", sans-serif;
     background: #f0f2f5;
     display: flex;
     justify-content: center;
@@ -22,7 +26,7 @@ body {
 .login-container h1 {
     text-align: center;
     margin-bottom: 15px;
-    color: #333;
+    color: #555;
 }
 
 .checkbox-container {
@@ -58,19 +62,23 @@ input {
 
 .links {
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
+
 .links a {
-    color: #007bff;
+    font-weight: bold;
+    color: #1983a3;
     text-decoration: none;
 }
 
 .links a:hover {
-    text-decoration: underline;
+    text-decoration: dashed;
+    color: #16647c;
 }
 
 .links span {
@@ -79,7 +87,8 @@ input {
 
 button {
     padding: 10px;
-    background: #007bff;
+    background: #1983a3;
+    font-weight: bold;
     color: white;
     border: none;
     border-radius: 5px;
@@ -90,12 +99,13 @@ button {
 .btn-ingresar {
     width: 60%;
     padding: 10px;
-    background: #007bff;
+    background: #1983a3;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -105,7 +115,7 @@ button {
 
 .grid-form .btn-guardar{
     padding: 10px;
-    background: #007bff;
+    background: #1983a3;
     color: white;
     border: none;
     border-radius: 5px;
@@ -125,11 +135,11 @@ button {
 }
 
 .grid-form .btn-guardar:hover{
-    background: #0056b3;
+    background: #16647c;
 }
 
 button:hover {
-    background: #0056b3;
+    background: #16647c;
 }
 
 /* Botón principal */
@@ -212,11 +222,16 @@ button:hover {
 
 .input-group input {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #e0e0e0;
     border-radius: 5px;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
+}
+
+.input-group input:focus{
+    border: 2px solid #1983a3 !important;
+    outline: none;
 }
 
 .align-bottom {
@@ -247,13 +262,18 @@ button:hover {
 /* Selects imitando input */
 select {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #e0e0e0;
     border-radius: 5px;
     font-size: 14px;
     width: 100%;
     box-sizing: border-box;
     background: white;
-    appearance: none; /* quita flechas nativas en algunos navegadores */
+    /* appearance: none; */
+}
+
+select:focus{
+    border: 2px solid #1983a3 !important;
+    outline: none;
 }
 
 .dni-group {
@@ -317,4 +337,19 @@ select {
 input:focus:not(.input-error):not(.input-success) {
     border: 2px solid #000; /* o el color que quieras al seleccionar */
     outline: none;
+}
+
+.titulo-forgot {
+    font-size: 22px;   /* más pequeño que el h1 normal */
+    margin-bottom: 15px;
+}
+
+.link-register {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.links a.link-forgot {
+    font-weight: normal !important;
+    font-size: 14px;
 }
